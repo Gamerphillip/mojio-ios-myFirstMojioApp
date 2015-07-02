@@ -155,7 +155,7 @@
 
 - (void)fetchTripsWithCompletionBlock:(completionBlockWithData)completion
 {
-    [[MojioClient client] getEntityWithPath:@"Trips" withQueryOptions:nil success:^(id responseObject) {
+    [[MojioClient client] getEntityWithPath:@"Trips" withQueryOptions:@{@"limit" : @10} success:^(id responseObject) {
         
         _trips = responseObject;
         
