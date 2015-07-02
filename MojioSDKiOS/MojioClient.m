@@ -136,7 +136,7 @@
             self.loginCompletionBlock();
         }
     } else {
-        NSString *urlString = [NSString stringWithFormat:@"https://api.moj.io/OAuth2/authorize?response_type=token&client_id=%@&redirect_uri=%@", self.appId, self.redirectUrlScheme];
+        NSString *urlString = [NSString stringWithFormat:@"https://api.moj.io/OAuth2SandBox/authorize?response_type=token&client_id=%@&redirect_uri=%@", self.appId, self.redirectUrlScheme];
         NSURL *url = [NSURL URLWithString:urlString];
         [[UIApplication sharedApplication] openURL:url];
     }
@@ -497,7 +497,7 @@ static NSString *urlEncode(id object) {
             if (type != nil && observerType != nil) {
                 NSError *err;
                 id object;
-                if ([type isEqualToString:@"Generic"]) {
+                if ([observerType isEqualToString:@"Generic"]) {
                     object = [[NSClassFromString(type) alloc] initWithDictionary:jsonObject error:&err];
                 }
                 else {
@@ -546,12 +546,18 @@ static NSString *urlEncode(id object) {
     [hubProxy on:@"Error" perform:self selector:@selector(errorInSignalRConnection:)];
 
     [hubConnection start];
+    
     hubConnection.started = ^{
         NSArray *argsArray = @[observerId];
         [hubProxy invoke:@"Subscribe" withArgs:argsArray completionHandler:^(id responseObject) {
+            if (completionBlock) {
+                completionBlock(responseObject);
+            }
+
             if (responseObject) {
                 [self.mojioClientDelegate invokedConnectionToMojioWithResponse:responseObject];
             }
+            
 //            else
 //                [self.mojioClientDelegate invokedConnectionToMojioWithResponse:nil];
         }];

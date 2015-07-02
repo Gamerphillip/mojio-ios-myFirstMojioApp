@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MojioClient.h"
+#import "MyFirstMojioAppManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MojioClient *mojioClient = [MojioClient client];
+    [mojioClient initWithAppId:@"cd804855-6d5c-4c4c-a308-d71e0a32417b" andSecretKey:@"9ae98c27-b4c1-4add-9de0-b78bc6ff1d48" andRedirectUrlScheme:@"myfirstmojioapp://"]; //sandbox key
+
+    //whether it should launch login window
+    if ([[MojioClient client] isUserLoggedIn]) {
+        [[MyFirstMojioAppManager instance] fetchMojiosWithCompletionBlock:nil];
+        
+        UIViewController *tripsViewController = [[UIStoryboard storyboardWithName:@"Trips" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TripsViewController"];
+        self.window.rootViewController = tripsViewController;
+    }
+    else {
+        
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Login" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    }
+
+    return YES;
+}
+
+-(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    //Note: iOS SDK handle URL and trigger callback block defined while initiate the OAuth2 login process
+    [[MojioClient client] handleOpenURL:url];
     return YES;
 }
 

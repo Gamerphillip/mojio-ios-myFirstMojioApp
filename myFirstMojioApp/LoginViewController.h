@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  myFirstMojioApp
 //
-//  Created by Ye Ma on 2015-07-01.
+//  Created by Ye Ma on 2015-07-02.
 //  Copyright (c) 2015 Ye Ma. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LoginViewController : UIViewController
 
 @end
-

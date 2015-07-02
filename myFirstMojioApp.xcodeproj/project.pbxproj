@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		910A47B69A1567E343B07BBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED861E3D3BFEC02B43E08BE /* libPods.a */; };
+		B28608DC1B45A7540043DBA4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608DB1B45A7540043DBA4 /* LoginViewController.m */; };
+		B28608DF1B45C2A40043DBA4 /* TripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608DE1B45C2A40043DBA4 /* TripsTableViewController.m */; };
+		B28608E21B45DED80043DBA4 /* TripTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608E11B45DED80043DBA4 /* TripTableViewCell.m */; };
+		B28608E41B45E2D20043DBA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28608E31B45E2D20043DBA4 /* MapKit.framework */; };
+		B28608E71B45E4950043DBA4 /* VehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608E61B45E4950043DBA4 /* VehicleViewController.m */; };
 		B2D797471B44AB54008BF430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D797461B44AB54008BF430 /* main.m */; };
 		B2D7974A1B44AB54008BF430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D797491B44AB54008BF430 /* AppDelegate.m */; };
-		B2D7974D1B44AB54008BF430 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D7974C1B44AB54008BF430 /* ViewController.m */; };
 		B2D797501B44AB54008BF430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D7974E1B44AB54008BF430 /* Main.storyboard */; };
 		B2D797521B44AB54008BF430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D797511B44AB54008BF430 /* Images.xcassets */; };
 		B2D797551B44AB54008BF430 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2D797531B44AB54008BF430 /* LaunchScreen.xib */; };
@@ -100,6 +104,9 @@
 		B2D798771B44AC7A008BF430 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D798761B44AC7A008BF430 /* Security.framework */; };
 		B2D798791B44AC80008BF430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D798781B44AC80008BF430 /* Foundation.framework */; };
 		B2D7987B1B44AC8D008BF430 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D7987A1B44AC8D008BF430 /* CFNetwork.framework */; };
+		B2D798811B44B43A008BF430 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D798801B44B43A008BF430 /* Trips.storyboard */; };
+		B2D798851B44F04F008BF430 /* MyFirstMojioAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D798841B44F04F008BF430 /* MyFirstMojioAppManager.m */; };
+		B2FA1EB41B45A46100DF87F8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FA1EB31B45A46100DF87F8 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,13 +122,20 @@
 /* Begin PBXFileReference section */
 		0266528393B6FC270FA531E7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1B8FF052DF3148DC8DF64F1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B28608DA1B45A7540043DBA4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B28608DB1B45A7540043DBA4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B28608DD1B45C2A40043DBA4 /* TripsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripsTableViewController.h; sourceTree = "<group>"; };
+		B28608DE1B45C2A40043DBA4 /* TripsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripsTableViewController.m; sourceTree = "<group>"; };
+		B28608E01B45DED80043DBA4 /* TripTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTableViewCell.h; sourceTree = "<group>"; };
+		B28608E11B45DED80043DBA4 /* TripTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTableViewCell.m; sourceTree = "<group>"; };
+		B28608E31B45E2D20043DBA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B28608E51B45E4950043DBA4 /* VehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleViewController.h; sourceTree = "<group>"; };
+		B28608E61B45E4950043DBA4 /* VehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleViewController.m; sourceTree = "<group>"; };
 		B2D797411B44AB54008BF430 /* myFirstMojioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstMojioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D797451B44AB54008BF430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2D797461B44AB54008BF430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2D797481B44AB54008BF430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2D797491B44AB54008BF430 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B2D7974B1B44AB54008BF430 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B2D7974C1B44AB54008BF430 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B2D7974F1B44AB54008BF430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D797511B44AB54008BF430 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2D797541B44AB54008BF430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -307,6 +321,10 @@
 		B2D798761B44AC7A008BF430 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B2D798781B44AC80008BF430 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2D7987A1B44AC8D008BF430 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B2D798801B44B43A008BF430 /* Trips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		B2D798831B44F04F008BF430 /* MyFirstMojioAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFirstMojioAppManager.h; sourceTree = "<group>"; };
+		B2D798841B44F04F008BF430 /* MyFirstMojioAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstMojioAppManager.m; sourceTree = "<group>"; };
+		B2FA1EB31B45A46100DF87F8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CED861E3D3BFEC02B43E08BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -315,6 +333,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28608E41B45E2D20043DBA4 /* MapKit.framework in Frameworks */,
 				B2D7987B1B44AC8D008BF430 /* CFNetwork.framework in Frameworks */,
 				B2D798791B44AC80008BF430 /* Foundation.framework in Frameworks */,
 				B2D798771B44AC7A008BF430 /* Security.framework in Frameworks */,
@@ -366,10 +385,11 @@
 		B2D797431B44AB54008BF430 /* myFirstMojioApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2D798821B44EDFB008BF430 /* User */,
+				B2FA1EB21B45A44900DF87F8 /* Login */,
+				B2D7987F1B44B42B008BF430 /* Trips */,
 				B2D797481B44AB54008BF430 /* AppDelegate.h */,
 				B2D797491B44AB54008BF430 /* AppDelegate.m */,
-				B2D7974B1B44AB54008BF430 /* ViewController.h */,
-				B2D7974C1B44AB54008BF430 /* ViewController.m */,
 				B2D7974E1B44AB54008BF430 /* Main.storyboard */,
 				B2D797511B44AB54008BF430 /* Images.xcassets */,
 				B2D797531B44AB54008BF430 /* LaunchScreen.xib */,
@@ -658,9 +678,43 @@
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
+		B2D7987F1B44B42B008BF430 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				B2D798801B44B43A008BF430 /* Trips.storyboard */,
+				B28608DD1B45C2A40043DBA4 /* TripsTableViewController.h */,
+				B28608DE1B45C2A40043DBA4 /* TripsTableViewController.m */,
+				B28608E01B45DED80043DBA4 /* TripTableViewCell.h */,
+				B28608E11B45DED80043DBA4 /* TripTableViewCell.m */,
+				B28608E51B45E4950043DBA4 /* VehicleViewController.h */,
+				B28608E61B45E4950043DBA4 /* VehicleViewController.m */,
+			);
+			name = Trips;
+			sourceTree = "<group>";
+		};
+		B2D798821B44EDFB008BF430 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B2D798831B44F04F008BF430 /* MyFirstMojioAppManager.h */,
+				B2D798841B44F04F008BF430 /* MyFirstMojioAppManager.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		B2FA1EB21B45A44900DF87F8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B2FA1EB31B45A46100DF87F8 /* Login.storyboard */,
+				B28608DA1B45A7540043DBA4 /* LoginViewController.h */,
+				B28608DB1B45A7540043DBA4 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		C066A20FA03654760A59C341 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B28608E31B45E2D20043DBA4 /* MapKit.framework */,
 				B2D7987A1B44AC8D008BF430 /* CFNetwork.framework */,
 				B2D798781B44AC80008BF430 /* Foundation.framework */,
 				B2D798761B44AC7A008BF430 /* Security.framework */,
@@ -753,6 +807,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2D797501B44AB54008BF430 /* Main.storyboard in Resources */,
+				B2FA1EB41B45A46100DF87F8 /* Login.storyboard in Resources */,
+				B2D798811B44B43A008BF430 /* Trips.storyboard in Resources */,
 				B2D797551B44AB54008BF430 /* LaunchScreen.xib in Resources */,
 				B2D797521B44AB54008BF430 /* Images.xcassets in Resources */,
 			);
@@ -805,13 +861,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28608E21B45DED80043DBA4 /* TripTableViewCell.m in Sources */,
 				B2D798531B44AB8B008BF430 /* ScriptObserver.m in Sources */,
 				B2D798341B44AB8B008BF430 /* Product.m in Sources */,
 				B2D7982A1B44AB8B008BF430 /* DTC.m in Sources */,
 				B2D798511B44AB8B008BF430 /* OdometerObserver.m in Sources */,
 				B2D798551B44AB8B008BF430 /* SmoothMojioObserver.m in Sources */,
 				B2D798281B44AB8B008BF430 /* Developer.m in Sources */,
-				B2D7974D1B44AB54008BF430 /* ViewController.m in Sources */,
+				B28608E71B45E4950043DBA4 /* VehicleViewController.m in Sources */,
 				B2D7983A1B44AB8B008BF430 /* Transmission.m in Sources */,
 				B2D7984B1B44AB8B008BF430 /* GeoFenceObserver.m in Sources */,
 				B2D7982C1B44AB8B008BF430 /* Entity.m in Sources */,
@@ -825,6 +882,7 @@
 				B2D7984D1B44AB8B008BF430 /* ObservableAttribute.m in Sources */,
 				B2D798421B44AB8B008BF430 /* AccelerometerObserver.m in Sources */,
 				B2D7982F1B44AB8B008BF430 /* ImageSize.m in Sources */,
+				B28608DC1B45A7540043DBA4 /* LoginViewController.m in Sources */,
 				B2D798561B44AB8B008BF430 /* SmoothObserverBase.m in Sources */,
 				B2D798411B44AB8B008BF430 /* AccelerationObserver.m in Sources */,
 				B2D7985A1B44AB8B008BF430 /* SRHubConnection.m in Sources */,
@@ -845,6 +903,7 @@
 				B2D7984F1B44AB8B008BF430 /* ObserverToken.m in Sources */,
 				B2D798301B44AB8B008BF430 /* Invoice.m in Sources */,
 				B2D798631B44AB8B008BF430 /* SRExceptionHelper.m in Sources */,
+				B2D798851B44F04F008BF430 /* MyFirstMojioAppManager.m in Sources */,
 				B2D7974A1B44AB54008BF430 /* AppDelegate.m in Sources */,
 				B2D798461B44AB8B008BF430 /* ConditionalObserverBase.m in Sources */,
 				B2D7983D1B44AB8B008BF430 /* Vehicle.m in Sources */,
@@ -877,6 +936,7 @@
 				B2D7984C1B44AB8B008BF430 /* HeadingObserver.m in Sources */,
 				B2D798241B44AB8B008BF430 /* Address.m in Sources */,
 				B2D798641B44AB8B008BF430 /* SRVersion.m in Sources */,
+				B28608DF1B45C2A40043DBA4 /* TripsTableViewController.m in Sources */,
 				B2D798321B44AB8B008BF430 /* Mojio.m in Sources */,
 				B2D7983C1B44AB8B008BF430 /* User.m in Sources */,
 				B2D7982E1B44AB8B008BF430 /* EventBroadcast.m in Sources */,

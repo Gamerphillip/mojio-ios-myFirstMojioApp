@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B8ABB0CE-DD7D-4F2D-89D2-3489944F7F75</string>
+	<key>IDESourceControlProjectName</key>
+	<string>myFirstMojioApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B31F00F154B9AA389CED22DCE49E0400DAE5F697</key>
+		<string>https://github.com/mojio/mojio-ios-myFirstMojioApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>myFirstMojioApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B31F00F154B9AA389CED22DCE49E0400DAE5F697</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mojio/mojio-ios-myFirstMojioApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B31F00F154B9AA389CED22DCE49E0400DAE5F697</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B31F00F154B9AA389CED22DCE49E0400DAE5F697</string>
+			<key>IDESourceControlWCCName</key>
+			<string>myFirstMojioApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
