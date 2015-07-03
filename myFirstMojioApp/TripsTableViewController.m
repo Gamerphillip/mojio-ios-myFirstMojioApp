@@ -22,8 +22,29 @@
     
     //fetch user's trips log and refresh the tableview upon response
     [[MyFirstMojioAppManager instance] fetchTripsWithCompletionBlock:^(NSArray *trips) {
-        [self.tableView reloadData];
+        if (trips) [self.tableView reloadData];
     }];
+    
+    // Initialize Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    
+    // Configure Refresh Control
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    
+    // Configure View Controller
+    [self setRefreshControl:refreshControl];
+}
+
+- (void)refresh:(id)sender
+{
+    NSLog(@"Refreshing");
+    
+    [[MyFirstMojioAppManager instance] fetchTripsWithCompletionBlock:^(NSArray *trips) {
+        if (trips) [self.tableView reloadData];
+        // End Refreshing
+        [(UIRefreshControl *)sender endRefreshing];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {

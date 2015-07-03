@@ -164,6 +164,8 @@
         
     } failure:^(NSError *error) {
         NSLog(@"Could not fetch trips");
+        if (completion)
+            completion(nil);
     }];
 }
 
