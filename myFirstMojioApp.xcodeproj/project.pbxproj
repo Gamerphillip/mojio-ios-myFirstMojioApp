@@ -13,6 +13,8 @@
 		B28608E21B45DED80043DBA4 /* TripTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608E11B45DED80043DBA4 /* TripTableViewCell.m */; };
 		B28608E41B45E2D20043DBA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28608E31B45E2D20043DBA4 /* MapKit.framework */; };
 		B28608E71B45E4950043DBA4 /* VehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28608E61B45E4950043DBA4 /* VehicleViewController.m */; };
+		B2ADF44B1B472AA700159107 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ADF4481B472AA700159107 /* CrumbPath.m */; };
+		B2ADF44C1B472AA700159107 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ADF44A1B472AA700159107 /* CrumbPathRenderer.m */; };
 		B2D797471B44AB54008BF430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D797461B44AB54008BF430 /* main.m */; };
 		B2D7974A1B44AB54008BF430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D797491B44AB54008BF430 /* AppDelegate.m */; };
 		B2D797501B44AB54008BF430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D7974E1B44AB54008BF430 /* Main.storyboard */; };
@@ -131,6 +133,10 @@
 		B28608E31B45E2D20043DBA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B28608E51B45E4950043DBA4 /* VehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleViewController.h; sourceTree = "<group>"; };
 		B28608E61B45E4950043DBA4 /* VehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleViewController.m; sourceTree = "<group>"; };
+		B2ADF4471B472AA700159107 /* CrumbPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPath.h; sourceTree = "<group>"; };
+		B2ADF4481B472AA700159107 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
+		B2ADF4491B472AA700159107 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
+		B2ADF44A1B472AA700159107 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
 		B2D797411B44AB54008BF430 /* myFirstMojioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstMojioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D797451B44AB54008BF430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2D797461B44AB54008BF430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -361,6 +367,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B2ADF4461B472A8600159107 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				B2ADF4471B472AA700159107 /* CrumbPath.h */,
+				B2ADF4481B472AA700159107 /* CrumbPath.m */,
+				B2ADF4491B472AA700159107 /* CrumbPathRenderer.h */,
+				B2ADF44A1B472AA700159107 /* CrumbPathRenderer.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
 		B2D797381B44AB54008BF430 = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +402,8 @@
 		B2D797431B44AB54008BF430 /* myFirstMojioApp */ = {
 			isa = PBXGroup;
 			children = (
-				B2D798821B44EDFB008BF430 /* User */,
+				B2ADF4461B472A8600159107 /* Overlay */,
+				B2D798821B44EDFB008BF430 /* Mojio */,
 				B2FA1EB21B45A44900DF87F8 /* Login */,
 				B2D7987F1B44B42B008BF430 /* Trips */,
 				B2D797481B44AB54008BF430 /* AppDelegate.h */,
@@ -692,13 +710,13 @@
 			name = Trips;
 			sourceTree = "<group>";
 		};
-		B2D798821B44EDFB008BF430 /* User */ = {
+		B2D798821B44EDFB008BF430 /* Mojio */ = {
 			isa = PBXGroup;
 			children = (
 				B2D798831B44F04F008BF430 /* MyFirstMojioAppManager.h */,
 				B2D798841B44F04F008BF430 /* MyFirstMojioAppManager.m */,
 			);
-			name = User;
+			name = Mojio;
 			sourceTree = "<group>";
 		};
 		B2FA1EB21B45A44900DF87F8 /* Login */ = {
@@ -861,6 +879,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2ADF44B1B472AA700159107 /* CrumbPath.m in Sources */,
 				B28608E21B45DED80043DBA4 /* TripTableViewCell.m in Sources */,
 				B2D798531B44AB8B008BF430 /* ScriptObserver.m in Sources */,
 				B2D798341B44AB8B008BF430 /* Product.m in Sources */,
@@ -927,6 +946,7 @@
 				B2D798731B44AB8B008BF430 /* SRWebSocket.m in Sources */,
 				B2D798391B44AB8B008BF430 /* Token.m in Sources */,
 				B2D798291B44AB8B008BF430 /* DiagnosticCodes.m in Sources */,
+				B2ADF44C1B472AA700159107 /* CrumbPathRenderer.m in Sources */,
 				B2D798441B44AB8B008BF430 /* BatteryVoltageObserver.m in Sources */,
 				B2D7986D1B44AB8B008BF430 /* SRAutoTransport.m in Sources */,
 				B2D798721B44AB8B008BF430 /* SRWebSocketConnectionInfo.m in Sources */,
