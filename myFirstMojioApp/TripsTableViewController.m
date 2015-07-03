@@ -9,6 +9,7 @@
 #import "TripsTableViewController.h"
 #import "TripTableViewCell.h"
 #import "MyFirstMojioAppManager.h"
+#import "Trip.h"
 
 @interface TripsTableViewController ()
 
@@ -46,7 +47,10 @@
     TripTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tripcell" forIndexPath:indexPath];
     
     // Configurate Trip cell, customize UI base on the data, geocoding is required if want to show details like address
-    cell.txtView.text = [NSString stringWithFormat:@"Trip %ld", (long)indexPath.row];
+    
+    Trip *trip = (Trip *)[[MyFirstMojioAppManager instance].trips objectAtIndex:indexPath.row];
+    
+    cell.txtView.text = [NSString stringWithFormat:@"%@", trip.StartTime];
     
     return cell;
 }

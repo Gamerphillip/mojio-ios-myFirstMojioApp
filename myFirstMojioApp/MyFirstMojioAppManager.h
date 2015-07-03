@@ -19,6 +19,7 @@ typedef void(^completionBlockWithoutData)(void);
 @property (nonatomic, readonly) NSString *defaultVehicleId;
 @property (nonatomic, readonly) Vehicle *defaultVehicle;
 @property (nonatomic, assign, readonly) NSInteger numOfTrips;
+@property (nonatomic, readonly) NSArray *trips;
 //@property (nonatomic, readonly) NSArray *vehicles;
 
 +(MyFirstMojioAppManager *)instance;
