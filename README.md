@@ -96,7 +96,6 @@ Fetch user's trips by calling below code:
 
  5. Implement MojioClient delegate methods to receive and process real-time events.
 	
-	#pragma mark - MojioClient Delegate methods
 	-(void) receivedMessageFromMojio : (id) message
 	{
 		//Refer to Mojio iOS SDK documentation for message format.
