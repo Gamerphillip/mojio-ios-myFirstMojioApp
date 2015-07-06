@@ -20,13 +20,16 @@ If you wish to download the full SDK source, please see [Visit our GitHub repo](
 1. Your application need to include MojioClient.h where you need access Mojio SDK
 
 2. In AppDelegate.m, add below code in "- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions" to initialize Mojio iOS SDK.
+
     MojioClient *mojioClient = [MojioClient client];
     [mojioClient initWithAppId:MOJIO_APP_ID andSecretKey:nil andRedirectUrlScheme:REDIRECT_URL];
 
 3. In AppDelegate.m add below code in "-(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url", this is to handle post-OAuth2 authentication callback.
+
     [[MojioClient client] handleOpenURL:url];
 
 4. In your UIViewController, add a UIButton assume it would execute the login upon click, and add below code in response of the event:
+
     [[MojioClient client] loginWithCompletionBlock:^{
         //Post-OAuth2 authentication callback, etc. refresh login status.
     }];
@@ -71,7 +74,8 @@ Fetch user's trips by calling below code:
     	//NSLog(@"failed to download user's vehicle data");
     }];
 
-4. Set up a observer on default vehicle to obtain real-time trip events
+4. Set up a observer on default vehicle to obtain real-time trip events.
+
     Vehicle *vehicle = [MyFirstMojioAppManager instance].defaultVehicle;
 
     Observer *vehicleObserver = [[Observer alloc] init];
@@ -90,7 +94,7 @@ Fetch user's trips by calling below code:
         // do something
     }];
 
- 5. Implement MojioClient delegate methods to receive and process real-time events
+ 5. Implement MojioClient delegate methods to receive and process real-time events.
 	
 	#pragma mark - MojioClient Delegate methods
 	-(void) receivedMessageFromMojio : (id) message
