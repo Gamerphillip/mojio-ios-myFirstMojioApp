@@ -33,6 +33,7 @@ If you wish to download the full SDK source, please see [Visit our GitHub repo](
 
 ###How to load user's trips###
 Fetch user's trips by calling below code:
+
     [[MojioClient client] getEntityWithPath:@"Trips" withQueryOptions:@{@"limit" : @10, @"desc" : @YES} success:^(id responseObject) {
 		//Array of Trip objects.        
         NSArray *trips = responseObject;
@@ -52,6 +53,7 @@ Fetch user's trips by calling below code:
         }];
 
 2. Obtain user's Mojios by calling below method:
+
             [[MojioClient client] getEntityWithPath:[NSString stringWithFormat:@"Users/%@/Mojios", self.userId] withQueryOptions:nil success:^(id responseObject) {
                 NSArray *mojios = (NSArray *)responseObject;
                 //Process mojios to obtain user's default Vehicle Id
@@ -61,6 +63,7 @@ Fetch user's trips by calling below code:
 
 
 3. Obtain user's default Vehicle data which contains etc. vehcile's deo location data dn when it was last updated etc.
+
     [[MojioClient client] getEntityWithPath:[NSString stringWithFormat:@"Vehicles/%@", self.defaultVehicleId] withQueryOptions:nil success:^(id responseObject) {
         Vehicle *vehicle = (Vehicle *) responseObject;
         _defaultVehicle = vehicle;
