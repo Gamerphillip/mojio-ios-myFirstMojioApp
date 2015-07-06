@@ -10,6 +10,9 @@
 #import "MojioClient.h"
 #import "MyFirstMojioAppManager.h"
 
+NSString *const MOJIO_APP_ID = @"<YOUR_APP_ID>";
+NSString *const REDIRECT_URL = @"<YOUR_APP_REDIRECT>://";
+
 @interface AppDelegate ()
 
 @end
@@ -21,7 +24,7 @@
     // Override point for customization after application launch.
     
     MojioClient *mojioClient = [MojioClient client];
-    [mojioClient initWithAppId:@"cd804855-6d5c-4c4c-a308-d71e0a32417b" andSecretKey:@"9ae98c27-b4c1-4add-9de0-b78bc6ff1d48" andRedirectUrlScheme:@"myfirstmojioapp://"]; //sandbox key
+    [mojioClient initWithAppId:MOJIO_APP_ID andSecretKey:nil andRedirectUrlScheme:REDIRECT_URL]; //sandbox key
 
     //whether it should launch login window
     if ([[MojioClient client] isUserLoggedIn]) {
