@@ -42,7 +42,8 @@ Fetch user's trips by calling below code:
     }];
 
 ###How to observe a vehicle on map###
-1. Obtain userId by calling below code, userId is required for get user's Mojios
+1. Obtain userId by calling below code, userId is required for get user's Mojios. 
+
         [[MojioClient client] getEntityWithPath:@"Users/Me" withQueryOptions:nil success:^(id responseObject) {
             User *user = (User *)responseObject;
             self.userId = user._id;
